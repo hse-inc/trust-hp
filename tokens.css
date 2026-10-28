@@ -1,0 +1,73 @@
+:root {
+  
+  --c-base: #ffffff;
+  --c-sub: #6d9aff;
+  --c-sub-deep: #2f5fd0;
+  --c-accent: #fde37c;
+  --c-navy: #1f2d4d;
+  --c-navy-soft: rgba(255, 255, 255, 0.72);
+  --c-navy-line: rgba(255, 255, 255, 0.4);
+  --c-pale: #f2f6ff;
+  --c-head: #24438f;
+  --c-ink: #1e2433;
+  --c-ink-soft: #5b6375;
+  --c-line: #d6deee;
+  --c-on-photo: #ffffff;
+  --c-shade: rgba(14, 22, 42, 0.5);
+  --c-shade-0: rgba(14, 22, 42, 0);
+  --c-card: rgba(255, 255, 255, 0.94);
+  --c-base-0: rgba(255, 255, 255, 0);
+
+  
+  --ff-body: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --ff-ui: "Zen Kaku Gothic New", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+  --ff-en: "Jost", "Futura", "Helvetica Neue", sans-serif;
+
+  
+  --fs-body: 15px;
+  --fw-body: 500;
+  --lh-body: 2;
+  --ls-body: 0.06em;
+  --fs-small: 13px;
+  --fs-label: 13px;
+  --fs-ui: 14px;
+  --fs-catch: clamp(30px, 4.4vw, 64px);
+  --lh-catch: 1.75;
+  --fs-big: clamp(23px, 2.8vw, 40px);
+  --lh-big: 1.8;
+  --fs-head: clamp(26px, 2.8vw, 36px);
+  --lh-head: 1.5;
+  --ls-head: 0.08em;
+
+  
+  --sp-1: 8px;
+  --sp-p: 20px;
+  --sp-b: 32px;
+  --sp-g: 44px;
+  --sp-s: 72px;
+  --sec-y: 96px;
+  --gutter: 20px;
+  --wrap: 1180px;
+  --radius: 4px;
+
+  
+  --header-h: 64px;
+  --circle: 40px;
+
+  
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-rv: 0.9s;
+}
+@media (min-width: 960px) {
+  :root {
+    --fs-body: 16px;
+    --sp-p: 24px;
+    --sp-b: 40px;
+    --sp-g: 56px;
+    --sp-s: 110px;
+    --sec-y: 150px;
+    --gutter: 48px;
+    --header-h: 88px;
+    --circle: 44px;
+  }
+}
