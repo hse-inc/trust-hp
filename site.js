@@ -29,11 +29,4 @@
     });
   }, { rootMargin: '0px 0px -10% 0px' });
   document.querySelectorAll('.rv').forEach((el) => io.observe(el));
-
-  const track = document.querySelector('.work__track');
-  document.querySelectorAll('[data-slide]').forEach((b) => b.addEventListener('click', () => {
-    const card = track.querySelector('.card');
-    const step = card.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap);
-    track.scrollBy({ left: step * Number(b.dataset.slide), behavior: 'smooth' });
-  }));
 })();
