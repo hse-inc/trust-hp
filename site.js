@@ -29,4 +29,7 @@
     });
   }, { rootMargin: '0px 0px -10% 0px' });
   document.querySelectorAll('.rv').forEach((el) => io.observe(el));
+
+  const form = document.querySelector('.form');
+  if (form) form.addEventListener('submit', (e) => e.preventDefault());
 })();
