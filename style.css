@@ -223,8 +223,9 @@
 @media (min-width: 960px) { .intro__txt { text-align: center; } }
 
 .msg__in { display: grid; gap: var(--sp-g); }
-.msg__ph { margin: 0; width: min(72%, 420px); aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--radius); }
-.msg__ph img { width: 100%; height: 100%; object-fit: cover; }
+
+.msg__ph { margin: 0; aspect-ratio: 3 / 2; overflow: hidden; border-radius: var(--radius); }
+.msg__ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
 .msg__body { display: grid; gap: var(--sp-b); align-content: center; }
 .msg__lead { font-size: clamp(20px, 2vw, 27px); font-weight: 500; line-height: 1.7; letter-spacing: 0.08em; color: var(--c-head); }
 .msg__sign { display: flex; align-items: baseline; justify-content: flex-end; gap: 16px; }
@@ -232,7 +233,8 @@
 .msg__name { font-size: 22px; letter-spacing: 0.16em; }
 @media (min-width: 960px) {
   .msg__in { grid-template-columns: 5fr 7fr; gap: clamp(48px, 7vw, 120px); align-items: center; }
-  .msg__ph { width: 100%; }
+  .msg__ph { aspect-ratio: 4 / 5; }
+  .msg__ph img { object-position: 50% 50%; }
 }
 
 .cards { display: grid; gap: var(--sp-g); margin-top: var(--sp-g); }
