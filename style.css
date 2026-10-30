@@ -260,18 +260,49 @@
 }
 
 .flow__list { display: grid; gap: var(--sp-b); margin-top: var(--sp-g); }
-.flow__item { position: relative; display: grid; grid-template-columns: 56px 1fr; column-gap: 20px; row-gap: var(--sp-1); align-content: start; }
-.flow__no { grid-row: span 2; display: grid; place-items: center; width: 56px; aspect-ratio: 1; border-radius: 50%; background: var(--c-sub-deep); color: var(--c-base); font-family: var(--ff-en); font-size: 18px; letter-spacing: 0.04em; }
-.flow__item:not(:last-child)::after { content: ""; position: absolute; left: 28px; top: 64px; bottom: calc(var(--sp-b) * -1 + 8px); width: 1px; background: var(--c-sub); }
+.flow__item { position: relative; display: grid; grid-template-columns: 64px 1fr; column-gap: 20px; row-gap: 4px; align-content: start; padding: 24px 20px 26px; border-radius: var(--radius); background: var(--c-card); box-shadow: 0 10px 30px rgba(31, 45, 77, 0.06); }
+.flow__icon { position: relative; grid-row: 1 / span 3; display: grid; place-items: center; width: 64px; aspect-ratio: 1; border-radius: 50%; background: var(--c-pale); color: var(--c-sub-deep); }
+.flow__icon svg { width: 32px; }
+
+.flow__icon::after { content: ""; position: absolute; right: 3px; top: 3px; width: 10px; aspect-ratio: 1; border-radius: 50%; background: var(--c-accent); box-shadow: 0 0 0 3px var(--c-card); }
+.flow__no { display: none; }
+
+.flow__item::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; border-radius: var(--radius) var(--radius) 0 0; background: linear-gradient(90deg, var(--c-sub) 0%, var(--c-accent) 100%); }
+.flow__step { font-family: var(--ff-en); font-size: 12px; line-height: 1.6; letter-spacing: 0.14em; color: var(--c-sub); }
 .flow__ttl { font-size: 19px; font-weight: 500; line-height: 1.6; letter-spacing: 0.08em; color: var(--c-head); }
 .flow__txt { grid-column: 2; color: var(--c-ink-soft); }
-@media (min-width: 960px) {
-  .flow__list { grid-template-columns: repeat(4, 1fr); gap: 24px; }
-  .flow__item { grid-template-columns: 1fr; justify-items: center; text-align: center; padding: 40px 24px 36px; border-radius: var(--radius); background: var(--c-card); box-shadow: 0 10px 30px rgba(31, 45, 77, 0.06); }
-  .flow__no { grid-row: auto; margin-bottom: var(--sp-1); }
-  .flow__txt { grid-column: auto; text-align: left; }
-  .flow__item:not(:last-child)::after { left: auto; right: -18px; top: 50%; bottom: auto; width: 12px; height: 12px; border-top: 1px solid var(--c-sub); border-right: 1px solid var(--c-sub); background: none; transform: translateY(-50%) rotate(45deg); }
+
+.flow__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 51px;
+  top: 100%;
+  width: 3px;
+  height: var(--sp-b);
+  background: linear-gradient(var(--c-accent), var(--c-accent)) 0 -10px / 3px 10px no-repeat, linear-gradient(var(--c-sub), var(--c-sub)) 1px 0 / 1px 100% no-repeat;
+  animation: flow-y 1.8s cubic-bezier(0.6, 0, 0.4, 1) infinite;
 }
+@keyframes flow-y { to { background-position: 0 calc(100% + 10px), 1px 0; } }
+@keyframes flow-x { to { background-position: calc(100% + 10px) 0, 0 1px; } }
+@media (min-width: 960px) {
+  .flow__list { grid-template-columns: repeat(4, 1fr); gap: 28px; }
+  .flow__item { grid-template-columns: 1fr; justify-items: center; text-align: center; padding: 48px 24px 40px; overflow: visible; }
+  .flow__icon { grid-row: auto; width: 96px; margin-bottom: var(--sp-p); }
+  .flow__icon svg { width: 44px; }
+  .flow__icon::after { right: 6px; top: 6px; width: 12px; }
+  
+  .flow__no { display: block; position: absolute; right: 16px; top: 8px; font-family: var(--ff-en); font-size: 64px; line-height: 1; letter-spacing: 0.02em; color: var(--c-pale); }
+  .flow__txt { grid-column: auto; margin-top: var(--sp-1); text-align: left; }
+  .flow__item:not(:last-child)::after {
+    left: 100%;
+    top: 96px;
+    width: 28px;
+    height: 3px;
+    background: linear-gradient(var(--c-accent), var(--c-accent)) -10px 0 / 10px 3px no-repeat, linear-gradient(var(--c-sub), var(--c-sub)) 0 1px / 100% 1px no-repeat;
+    animation-name: flow-x;
+  }
+}
+@media (prefers-reduced-motion: reduce) { .flow__item::after { animation: none; } }
 
 .outline__in, .access__in { display: grid; gap: var(--sp-g); }
 .access__map { aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius); background: var(--c-line); }
