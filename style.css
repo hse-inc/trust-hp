@@ -350,6 +350,9 @@ button.cta { border: 0; cursor: pointer; }
 .footer__sns { display: inline-flex; align-items: center; gap: 8px; font-family: var(--ff-en); letter-spacing: 0.06em; }
 .footer__sns svg { width: 18px; }
 .footer__nav { display: grid; grid-template-columns: repeat(2, max-content); gap: 14px 40px; font-size: var(--fs-ui); letter-spacing: 0.08em; }
+.footer__nav { align-content: start; }
+.footer__nav a { display: grid; gap: 2px; line-height: 1.5; }
+.footer__en { font-family: var(--ff-en); font-size: 11px; letter-spacing: 0.12em; color: var(--c-sub); }
 .footer__top { position: absolute; right: 0; top: 0; }
 .footer__copy { margin: 0; padding-block: var(--sp-b); font-family: var(--ff-en); font-size: 12px; text-align: center; color: var(--c-ink-soft); letter-spacing: 0.06em; }
 @media (min-width: 960px) {
