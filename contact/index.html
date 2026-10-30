@@ -11,17 +11,17 @@
 <meta property="og:title" content="お問い合わせ｜株式会社トラスト電気">
 <meta property="og:description" content="株式会社トラスト電気へのお問い合わせはこちらから。お電話またはフォームで承ります。">
 <meta property="og:url" content="https://v2.trust-hp-5m3.pages.dev/contact/">
-<meta property="og:image" content="https://v2.trust-hp-5m3.pages.dev/assets/ogp.jpg?v=20261030c">
+<meta property="og:image" content="https://v2.trust-hp-5m3.pages.dev/assets/ogp.jpg?v=20261030d">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://v2.trust-hp-5m3.pages.dev/assets/ogp.jpg?v=20261030c">
+<meta name="twitter:image" content="https://v2.trust-hp-5m3.pages.dev/assets/ogp.jpg?v=20261030d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../tokens.css?v=20261030c">
-<link rel="stylesheet" href="../base.css?v=20261030c">
-<link rel="stylesheet" href="../style.css?v=20261030c">
+<link rel="stylesheet" href="../tokens.css?v=20261030d">
+<link rel="stylesheet" href="../base.css?v=20261030d">
+<link rel="stylesheet" href="../style.css?v=20261030d">
 </head>
 <body class="is-sub is-sub--contact">
 
@@ -82,16 +82,15 @@
           <label class="form__label" for="f-tel">電話番号<span class="form__req form__req--opt">任意</span></label>
           <input class="form__input" id="f-tel" name="your-tel" type="tel" autocomplete="tel">
         </div>
-        <div class="form__row">
-          <label class="form__label" for="f-type">お問い合わせの種類<span class="form__req">必須</span></label>
-          <span class="form__select"><select class="form__input" id="f-type" name="your-type" required>
-            <option value="">選択してください</option>
-            <option>サービスについて</option>
-            <option>お見積もりについて</option>
-            <option>採用について</option>
-            <option>取材・広報・協業に関するお問い合わ</option>
-            <option>その他</option>
-          </select></span>
+        <div class="form__row" role="radiogroup" aria-labelledby="f-type">
+          <p class="form__label" id="f-type">お問い合わせの種類<span class="form__req">必須</span></p>
+          <div class="form__radios">
+            <label class="form__radio"><input type="radio" name="your-type" value="サービスについて" required><span>サービスについて</span></label>
+            <label class="form__radio"><input type="radio" name="your-type" value="お見積もりについて"><span>お見積もりについて</span></label>
+            <label class="form__radio"><input type="radio" name="your-type" value="採用について"><span>採用について</span></label>
+            <label class="form__radio"><input type="radio" name="your-type" value="取材・広報・協業に関するお問い合わせ"><span>取材・広報・協業に関する<wbr>お問い合わせ</span></label>
+            <label class="form__radio"><input type="radio" name="your-type" value="その他"><span>その他</span></label>
+          </div>
         </div>
         <div class="form__row">
           <label class="form__label" for="f-msg">お問い合わせ内容<span class="form__req">必須</span></label>
@@ -131,6 +130,6 @@
   <p class="footer__copy" aria-hidden="true">© TRUST DENKI Co., Ltd.</p>
 </footer>
 
-<script src="../site.js?v=20261030c"></script>
+<script src="../site.js?v=20261030d"></script>
 </body>
 </html>
